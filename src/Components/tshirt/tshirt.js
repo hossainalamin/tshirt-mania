@@ -1,11 +1,16 @@
 import React from 'react';
-
-const tshirt = () => {
+import './Tshirt.css'
+const Tshirt = ({tshirts}) => {
+    const {id, picture,name,price} = tshirts;
     return (
-        <div>
-            
+        <div className='tshirt'>
+            <img src={picture}></img>
+            <h2>{name}</h2>
+            <h4>Price:{price}</h4>
+            <button>Order Now</button>
+
         </div>
     );
 };
 
-export default tshirt;
+export default Tshirt;
