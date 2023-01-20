@@ -1,13 +1,13 @@
 import React from 'react';
 import './Tshirt.css'
-const Tshirt = ({tshirts}) => {
-    const {id, picture,name,price} = tshirts;
+const Tshirt = ({tshirts, addToCart}) => {
+    const {picture,name,price} = tshirts;
     return (
         <div className='tshirt'>
-            <img src={picture}></img>
+            <img src={picture} alt=""></img>
             <h2>{name}</h2>
             <h4>Price:{price}</h4>
-            <button>Order Now</button>
+            <button onClick={()=>addToCart(tshirts)}>Order Now</button>
 
         </div>
     );
